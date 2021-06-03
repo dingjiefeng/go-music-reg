@@ -9,5 +9,5 @@ func main() {
 	a := audio.Audio{}
 	a.SetFile("F:\\music\\demo.wav")
 	a.ResloveContent()
-	fmt.Println(a.Header, a.Format, a.Content.ID)
+	fmt.Println(a.Header, a.Format, len(a.Content.Frames))
 }

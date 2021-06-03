@@ -6,6 +6,17 @@ import (
 	"fmt"
 )
 
+type (
+	bytesToIntF func([]byte) int
+)
+
+var (
+	byteSizeToIntFunc = map[int]bytesToIntF{
+		16: bits16ToInt,
+		32: bits32ToInt,
+	}
+)
+
 func bits64ToInt(b []byte) uint64 {
 	if len(b) != 8 {
 		panic("Expected size 8!")

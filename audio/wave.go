@@ -17,7 +17,7 @@ type WaveFormat struct {
 	BitsPerSample int
 }
 
-type Frame uint64
+type Frame int64
 
 type WaveData struct {
 	ID      string
